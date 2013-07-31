@@ -1,0 +1,20 @@
+development: &defaults
+  adapter: postgresql
+  encoding: unicode
+  database: wisewords_development
+  pool: 5
+  username: enbake
+  password: admin
+  host: localhost
+
+test:
+  <<: *defaults
+  database: wisewords_test
+
+staging:
+  <<: *defaults
+  database: wisewords_staging
+
+production:
+  <<: *defaults
+  database: wisewords_production
